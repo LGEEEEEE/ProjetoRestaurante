@@ -1,0 +1,221 @@
+/* Substitua o conteúdo do seu arquivo: kds-cozinha/src/index.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1f2933;
+}
+
+.header__subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.toolbar__search {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #f9fafb;
+  font-size: 1rem;
+}
+
+.toolbar__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.toolbar__toggle input {
+  transform: scale(1.1);
+}
+
+.toolbar__logout {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: filter 0.2s ease;
+}
+
+.toolbar__logout:hover {
+  filter: brightness(1.05);
+}
+
+.kds-board {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.order-column {
+  background-color: #e9ecef;
+  border-radius: 8px;
+  min-width: 350px;
+  max-width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: 2px solid #ced4da;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-pill {
+  background: rgba(0,0,0,0.1);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.85rem;
+}
+
+.order-column--empty {
+  background-color: #f8fafc;
+  border: 1px dashed #d1d5db;
+}
+
+.column-content {
+  padding: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.empty-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-weight: 600;
+  height: 100%;
+}
+
+.order-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  /* cursor: pointer; <-- Removido, clique é no botão */
+  transition: background-color 0.2s;
+  display: flex; /* NOVO: Adicionado flex-direction */
+  flex-direction: column; /* NOVO: Itens empilhados */
+}
+
+/* .order-card:hover {
+  background-color: #f8f9fa; <-- Removido */
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.table-number {
+  color: #d9534f;
+}
+
+.timer {
+  color: #5cb85c;
+}
+
+.order-item {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.item-quantity {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.item-name {
+  flex: 1;
+}
+
+/* **** NOVO: Estilos para os botões de ação **** */
+.card-actions {
+  margin-top: 15px; /* Espaçamento do corpo do card */
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.action-button {
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-button {
+  background-color: #007bff;
+  color: white;
+}
+.start-button:hover {
+  background-color: #0056b3;
+}
+
+.ready-button {
+  background-color: #5cb85c;
+  color: white;
+}
+.ready-button:hover {
+  background-color: #449d44;
+}
+/* **** FIM DOS NOVOS ESTILOS **** */
